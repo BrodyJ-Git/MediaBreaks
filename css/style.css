@@ -1,0 +1,114 @@
+/* defaults */
+
+.header
+{
+    width: 100%;
+}
+
+.picture
+{
+    text-align: center;
+}
+
+.content
+{
+    width: 100%;
+}
+
+/* phone size and below */
+
+@media (max-width: 768px)
+{
+    .content
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar
+    {
+        width:100%;
+    }
+
+    img
+    {
+        min-width: 320px;
+        min-height: 280px;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+/* tablet / square monitor size  */
+
+@media (min-width: 1024px)
+{
+    .wrapper {
+        display: flex;
+    }
+
+    .wrapper div {
+        flex: 1;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    [class*="col"], [class*="picture"], [class*="sidebar"] {
+        float: left
+    }
+
+    .row::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .sidebar
+    {
+        width:12.6%;
+    }
+}
+
+/* modern monitor size */
+
+@media (min-width: 1420px)
+{
+    .content
+    {
+        width: 100%;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .wrapper div {
+        flex: 1;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    [class*="col"], [class*="picture"], [class*="sidebar"] {
+        float: left
+    }
+
+    .row::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .sidebar
+    {
+        max-width:8.6%;
+    }
+
+    .picture
+    {
+        width:57%;
+    }
+}
